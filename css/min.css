@@ -85,16 +85,17 @@ html {
   display: flex;
 }
 .header .title_list li {
+  background: #282C34;
   color: #fff;
   width: 137px;
   text-align: center;
-  line-height: 37px;
+  line-height: 33px;
   padding-left: 35px;
   font-size: 14px;
 }
 .header .title_list li::before {
   position: absolute;
-  top: 8px;
+  top: 11px;
   left: 298px;
   content: "";
   display: inline-block;
@@ -115,6 +116,7 @@ html {
   color: #fff;
   height: calc(100vh - 37px);
   height: calc(100vh - 37px);
+  background-color: #282C34;
 }
 .first video {
   position: absolute;
@@ -288,6 +290,7 @@ html {
   justify-content: center;
   height: 100%;
   width: 50%;
+  background-color: #282C34;
 }
 .About .about_left h2 {
   font-size: 50px;
@@ -319,6 +322,7 @@ html {
   height: 100%;
   width: 50%;
   border-left: 1px solid #4f4f4f;
+  background-color: #282C34;
 }
 .About .about_right #btn {
   position: absolute;
@@ -420,6 +424,7 @@ html {
   justify-content: center;
   height: 100%;
   width: 50%;
+  background-color: #282C34;
 }
 .Project .project_left h2 {
   font-size: 30px;
@@ -495,6 +500,7 @@ html {
   height: 100%;
   width: 50%;
   border-left: 1px solid #4f4f4f;
+  background-color: #282C34;
 }
 .Project .project_right h2 {
   font-size: 30px;
@@ -507,15 +513,90 @@ html {
   flex-wrap: wrap;
   width: 100%;
   height: 622px;
+  border: 1px solid #fff;
 }
-.Project .project_right .pr_list li:first-child {
+.Project .project_right li {
+  transition: 0.5s;
+}
+.Project .project_right li > a {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.Project .project_right li span {
+  position: absolute;
+  background: #fff;
+  z-index: 999;
+  transition: all 0.5s;
+}
+.Project .project_right li:first-child {
+  position: relative;
   width: 60%;
   border: 1px solid #000;
   background-image: url(../img/d8.png);
   background-size: 433px 364px;
   background-repeat: no-repeat;
 }
-.Project .project_right .pr_list li:nth-child(2) {
+.Project .project_right li:first-child span:nth-child(1) {
+  left: 10px;
+  top: 10px;
+  width: 0;
+  height: 3px;
+}
+.Project .project_right li:first-child span:nth-child(2) {
+  right: 10px;
+  top: 10px;
+  width: 3px;
+  height: 0;
+}
+.Project .project_right li:first-child span:nth-child(3) {
+  right: 10px;
+  bottom: 10px;
+  width: 0;
+  height: 3px;
+}
+.Project .project_right li:first-child span:nth-child(4) {
+  left: 10px;
+  bottom: 10px;
+  width: 3px;
+  height: 0;
+}
+.Project .project_right li:first-child:hover li:first-child::after {
+  background-color: rgba(28, 28, 28, 0.842);
+}
+.Project .project_right li:first-child:hover span {
+  display: block;
+}
+.Project .project_right li:first-child:hover span:nth-child(1) {
+  width: 95%;
+}
+.Project .project_right li:first-child:hover span:nth-child(2) {
+  height: 93%;
+}
+.Project .project_right li:first-child:hover span:nth-child(3) {
+  width: 95%;
+}
+.Project .project_right li:first-child:hover span:nth-child(4) {
+  height: 93%;
+}
+.Project .project_right li:first-child:hover a {
+  position: absolute;
+  display: block;
+}
+.Project .project_right li:first-child:hover a h3 {
+  font-size: 24px;
+  text-align: center;
+  padding: 24px;
+  transform: translateY(17px);
+  transition: 0.3s;
+}
+.Project .project_right li:first-child:hover a p {
+  font-size: 18px;
+  padding-left: 20px;
+  line-height: 24px;
+  transform: translateY(23px);
+}
+.Project .project_right li:nth-child(2) {
   width: 40%;
   border: 1px solid #000;
   background: rgba(0, 129, 119, 0.6);
@@ -524,7 +605,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
-.Project .project_right .pr_list li:nth-child(3) {
+.Project .project_right li:nth-child(3) {
   width: 40%;
   border: 1px solid #000;
   background: #fff;
@@ -533,7 +614,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
-.Project .project_right .pr_list li:last-child {
+.Project .project_right li:last-child {
   padding: 20px;
   width: 60%;
   border: 1px solid #000;
@@ -542,11 +623,6 @@ html {
   background-size: 50% 50%;
   background-repeat: no-repeat;
   background-position: center;
-}
-.Project .project_right .pr_list li > a {
-  width: 100%;
-  height: 100%;
-  display: block;
 }
 
 /* Q&A시작 */
@@ -565,6 +641,7 @@ html {
   height: 100%;
   width: 50%;
   border-left: 1px solid #4f4f4f;
+  background-color: #282C34;
 }
 .Q_A .qa_left h2 {
   font-size: 30px;
@@ -621,6 +698,7 @@ html {
   height: 100%;
   width: 50%;
   border-left: 1px solid #4f4f4f;
+  background-color: #282C34;
 }
 
 /* Q&A끝*/
