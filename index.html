@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIN</title>
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- 서식 -->
+  <link rel="stylesheet" href="./css/min.css">
+  <!-- 코드 -->
+  <link rel="stylesheet" href="./css/code.css">
+ <!-- 아이콘폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars"></div>
+  <!-- 전체박스 -->
+  <div class="all_wrap">
+
+    <!-- 왼쪽 nav -->
+      <nav class="nav">
+        <h1>
+          <a href="./index.html" title="asd">
+            <img src="./img/logo_w.png" alt="로고">
+          </a>
+        </h1>
+
+        <ul>
+          <li>
+            <button class="btn">
+              ABOUT
+            </button>
+          </li>
+          <li>
+            <button  class="btn">
+              PROJECT
+            </button>
+          </li>
+          <li>
+            <button  class="btn">
+              Q&A
+            </button>
+          </li>
+          <li>
+            <button  class="btn">
+              CONTACT
+            </button>
+          </li>
+        </ul>
+      </nav>   
+
+      <!-- 컨텐츠 전체 박스 -->
+      <div class="content_wrap">
+        <!-- 오른쪽 컨텐츠 헤더 -->
+        <header class="header">
+          <ul class="title_list">
+            <li class="portfolio">PORTFOLIO</li>
+            <li class="item">ABOUT</li>
+            <li class="item">PROJECT</li>
+            <li class="item">Q&A</li>
+            <li class="item">CONTACT</li>
+          </ul>
+        </header>
+    <!-- 오른쪽 컨텐츠 메인 -->
+        <main>
+          <!-- 메인전체 섹션 -->
+          <section class="tab_content">
+            <h2 class="none">&nbsp;</h2>
+            <!-- 첫 화면 시작  -->
+            <section class="first">
+              <!-- mute=음소거 autoplay=강제자동재생 -->
+              <video muted="" autoplay="" loop="infinite">
+                <source src="./img/first_video.mov">
+              </video>
+              <h2 class="none">&nbsp;</h2>
+              <article class="first_left">
+                <div class="first_div">
+                <span>안녕하세요 웹 개발자 김민석입니다</span>
+                <h2>
+                  움직이는 웹사이트를 개발합니다. 
+                </h2>
+                <span class="first_span"> 웹표준과 웹접근성, 최근 트랜드를 고려해서 마크업을 하며,<br>
+                  스크립트를 이용해 역동적인 웹사이트를 구현하는 웹 개발자입니다.</span>
+                </div>
+              </article>
+              <article class="first_right">
+                <div class="container invisible">
+                  
+                    <div>w</div>
+                    <div>e</div>
+                    <div>l</div>
+                    <div>c</div>
+                    <div>o</div>
+                    <div>m</div>
+                    <div>e</div>
+              
+                  <br>
+                  <div>t</div>
+                  <div>o</div>
+                  <br>
+                  <div>M</div>
+                  <div>i</div>
+                  <div>n</div>
+                  <div>s</div>
+                  <div>e</div>
+                  <div>o</div>
+                  <div>k'</div>
+                  <div>s</div>
+                  <br>
+                  <div>p</div>
+                  <div>o</div>
+                  <div>r</div>
+                  <div>t</div>
+                  <div>f</div>
+                  <div>o</div>
+                  <div>l</div>
+                  <div>i</div>
+                  <div>o</div>
+                </div>
+              </article>
+            </section>
+            <!-- 첫 화면 끝 -->
+
+            <!-- 어바웃 박스 -->
+            <section class="tab_list About">
+              <h2 class="none">&nbsp;</h2>
+              <!-- 어바웃 왼쪽 -->
+              <article class="about_left">
+                <h2 class="none">&nbsp;</h2>
+                
+              <ul>
+                <li class="about_left_img"><img src="./img/html.png" alt="프로필 사진"></li>
+                <li class="about_left_text">
+                  <p></p>
+                </li>
+              </ul>
+              </article>
+              <!-- 어바웃 오른쪽 박스 -->
+              <article class="about_right">
+                <h2 class="none">&nbsp;</h2>
+                <button id="btn" onclick="startAnimation()">SKILL</button>
+                  <div id="container">
+                    <div class="skill_box1">
+                      <img src="./img/html.png" title="html이미지"  class="image vertex1">
+                      <img src="./img/css.png" title="css이미지" class="image vertex2">                   
+                      <img src="./img/github.png" title="깃헙이미지" class="image vertex6">
+                      <img src="./img/react.png" title="리액트" class="image vertex7">
+                    </div>
+
+                    <div class="skill_box2">
+                      <img src="./img/js.png" title="js이미지" class="image vertex3">
+                      <img src="./img/figma.png" title="피그마이미지" class="image vertex5">
+                      <img src="./img/sass.png" title="sass이미지" class="image vertex8">
+                      <img src="./img/mysql.png" title="myspl이미지" class="image vertex10">
+                    </div>
+                    <div class="skill_box3">
+                      <img src="./img/jquery.png" title="jquery이미지" class="image vertex4">
+                      <img src="./img/php.png" title="php이미지" class="image vertex9">
+                    </div>
+                    <!-- 추가 이미지들을 여기에 추가 -->
+                  </div>
+              </article>
+            </section>
+            <!-- 어바웃 끝 -->
+            
+            <!-- 프로젝트 시작 -->
+            <section class="tab_list Project">
+              <h2 class="none">&nbsp;</h2>
+              <!-- 프로젝트 왼쪽박스 -->
+              <article class="project_left">
+                <h2>Personal Project</h2>
+                <ul class="pl_list">
+                  <li><a href="https://skymin95.github.io/harim/index.html" title="하림 펫 푸드 적응형"></a></li>
+                  <li><a href="https://skymin95.github.io/casper/index.html#" title="캐스퍼">
+                    <p>Capser</p>
+                  </a>
+                  </li>
+                  <li><a href="javscript:" title="comming soon">
+                    <p>Comming Soon</p>
+                  </a>
+                  </li>
+                  <li>
+                    <a href="javscript:" title="comming soon">
+                    <p>Comming Soon</p>
+                    </a>
+                  </li>
+                </ul>
+              </article>
+              <!-- 프로젝트 오른쪽 박스 -->
+              <article class="project_right">
+                <h2>Team Project</h2>
+                <ul class="pr_list">
+                  <li><a href="https://skymin95.github.io/Disney_project/index.html" title="디즈니"></a></li>
+                  <li><a href="http://minseok.dothome.co.kr/%ED%95%98%EB%82%98/index.html" title="하나금융지주"></a></li>
+                  <li><a href="http://endingfairy.dothome.co.kr/Ending_fairy/adm/index.php" title="캐논관리자페이지"></a></li>
+                  <li><a href="http://endingfairy.dothome.co.kr/Ending_fairy/intro.php" title="캐논LMS시스템"></a></li>
+                </ul>
+              </article>           
+            </section>
+            <!-- 프로젝트 끝 -->
+            
+            <!-- Q_A 시작 -->
+            <section class="tab_list Q_A">
+              <h2 class="none">&nbsp;</h2>
+              <!-- Q_A 왼쪽박스 -->
+              <article class="qa_left">
+                <h2>예상질문,답변</h2>
+
+                <div class="qa_div">
+                  <dl class="qa_dl">
+                    <dt>
+                      <a href="#">전공자이신가요? 아니라면 전향하게 된 이유는 무엇인가요?
+                      <i class="fas fa-angle-down a_on"></i>
+                      </a>
+                    </dt>  
+                    <dd class="cont">
+                          처음에는 s아무것도 모르는 상태였는데 대학 룸메이트가 하는것을 보고 호기심이 생겼고 예전에 추천을 받아 
+                    </dd>
+                  <dl>
+                </div>
+
+                <div class="qa_div">
+                  <dl class="qa_dl">
+                    <dt>
+                      <a href="#">본인만의 강점이 무엇이라고 생각하시나요?
+                      <i class="fas fa-angle-down a_on"></i>
+                      </a>
+                    </dt>  
+                    <dd class="cont">
+                          처음에는 s아무것도 모르는 상태였는데 대학 룸메이트가 하는것을 보고 호기심이 생겼고 예전에 추천을 받아 
+                    </dd>
+                  <dl>
+                </div>
+
+                <div class="qa_div">
+                  <dl class="qa_dl">
+                    <dt>
+                      <a href="#">팀 프로젝트를 하다 어려움을 겪게 되었을 때 어떻게 극복하셨나요?
+                      <i class="fas fa-angle-down a_on"></i>
+                      </a>
+                    </dt>  
+                    <dd class="cont">
+                          처음에는 s아무것도 모르는 상태였는데 대학 룸메이트가 하는것을 보고 호기심이 생겼고 예전에 추천을 받아adasdsadasdasdasssssssssssssssssssssssssssssssssssssssssssssssss 
+                    </dd>
+                  <dl>
+                </div>
+
+                <div class="qa_div">
+                  <dl class="qa_dl">
+                    <dt>
+                      <a href="#">입사 후 포부를 말해주세요.
+                      <i class="fas fa-angle-down a_on"></i>
+                      </a>
+                    </dt>  
+                    <dd class="cont">
+                          처음에는 s아무것도 모르는 상태였는데 대학 룸메이트가 하는것을 보고 호기심이 생겼고 예전에 추천을 받아 
+                    </dd>
+                  <dl>
+                </div>
+
+              </article>
+              <!-- Q_A 오른쪽 박스 -->
+              <article class="qa_right">
+                <h2>이미지</h2>
+              </article>     
+            </section>
+            <!-- Q_A 끝 -->
+
+            <!--context  -->
+            <section class="tab_list Contact">
+              <h2 class="none">&nbsp;</h2>
+              <article>
+                <h2>박스</h2>
+
+              </article>
+
+            </section>
+          </section> 
+        </main>      
+      </div>
+      <footer></footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/min.js"></script>
+</body>
+</html>
