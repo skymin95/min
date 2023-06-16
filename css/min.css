@@ -89,13 +89,13 @@ html {
   color: #fff;
   width: 137px;
   text-align: center;
-  line-height: 33px;
+  line-height: 37px;
   padding-left: 35px;
   font-size: 14px;
 }
 .header .title_list li::before {
   position: absolute;
-  top: 11px;
+  top: 9px;
   left: 298px;
   content: "";
   display: inline-block;
@@ -121,7 +121,6 @@ html {
 .first video {
   position: absolute;
   opacity: 0.8;
-  height: calc(100vh - 37px);
 }
 .first .first_left {
   position: relative;
@@ -526,15 +525,15 @@ html {
 .Project .project_right li span {
   position: absolute;
   background: #fff;
-  z-index: 999;
+  z-index: 10;
   transition: all 0.5s;
 }
 .Project .project_right li:first-child {
   position: relative;
   width: 60%;
   border: 1px solid #000;
-  background-image: url(../img/d8.png);
-  background-size: 433px 364px;
+  background-image: url(../img/Disney.png);
+  background-size: 490px 364px;
   background-repeat: no-repeat;
 }
 .Project .project_right li:first-child span:nth-child(1) {
@@ -561,8 +560,16 @@ html {
   width: 3px;
   height: 0;
 }
-.Project .project_right li:first-child:hover li:first-child::after {
+.Project .project_right li:first-child:hover::before {
   background-color: rgba(28, 28, 28, 0.842);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: rgba(0, 0, 0, 0.501);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 .Project .project_right li:first-child:hover span {
   display: block;
@@ -584,28 +591,100 @@ html {
   display: block;
 }
 .Project .project_right li:first-child:hover a h3 {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   padding: 24px;
   transform: translateY(17px);
   transition: 0.3s;
+  color: #fff;
 }
 .Project .project_right li:first-child:hover a p {
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 20px;
   line-height: 24px;
   transform: translateY(23px);
+  color: #fff;
 }
 .Project .project_right li:nth-child(2) {
+  position: relative;
   width: 40%;
   border: 1px solid #000;
-  background: rgba(0, 129, 119, 0.6);
   background-image: url(../img/하나금융.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+.Project .project_right li:nth-child(2) span:nth-child(1) {
+  left: 10px;
+  top: 10px;
+  width: 0;
+  height: 3px;
+}
+.Project .project_right li:nth-child(2) span:nth-child(2) {
+  right: 10px;
+  top: 10px;
+  width: 3px;
+  height: 0;
+}
+.Project .project_right li:nth-child(2) span:nth-child(3) {
+  right: 10px;
+  bottom: 10px;
+  width: 0;
+  height: 3px;
+}
+.Project .project_right li:nth-child(2) span:nth-child(4) {
+  left: 10px;
+  bottom: 10px;
+  width: 3px;
+  height: 0;
+}
+.Project .project_right li:nth-child(2):hover::before {
+  background-color: rgba(28, 28, 28, 0.842);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: rgba(0, 0, 0, 0.501);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.Project .project_right li:nth-child(2):hover span {
+  display: block;
+}
+.Project .project_right li:nth-child(2):hover span:nth-child(1) {
+  width: 92%;
+}
+.Project .project_right li:nth-child(2):hover span:nth-child(2) {
+  height: 93%;
+}
+.Project .project_right li:nth-child(2):hover span:nth-child(3) {
+  width: 92%;
+}
+.Project .project_right li:nth-child(2):hover span:nth-child(4) {
+  height: 93%;
+}
+.Project .project_right li:nth-child(2):hover a {
+  position: absolute;
+  display: block;
+}
+.Project .project_right li:nth-child(2):hover a h3 {
+  font-size: 20px;
+  text-align: center;
+  padding: 24px;
+  transform: translateY(17px);
+  transition: 0.3s;
+  color: #fff;
+}
+.Project .project_right li:nth-child(2):hover a p {
+  font-size: 16px;
+  padding-left: 20px;
+  line-height: 24px;
+  transform: translateY(23px);
+  color: #fff;
+}
 .Project .project_right li:nth-child(3) {
+  position: relative;
   width: 40%;
   border: 1px solid #000;
   background: #fff;
@@ -614,7 +693,77 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
+.Project .project_right li:nth-child(3) span:nth-child(1) {
+  left: 10px;
+  top: 10px;
+  width: 0;
+  height: 3px;
+}
+.Project .project_right li:nth-child(3) span:nth-child(2) {
+  right: 10px;
+  top: 10px;
+  width: 3px;
+  height: 0;
+}
+.Project .project_right li:nth-child(3) span:nth-child(3) {
+  right: 10px;
+  bottom: 10px;
+  width: 0;
+  height: 3px;
+}
+.Project .project_right li:nth-child(3) span:nth-child(4) {
+  left: 10px;
+  bottom: 10px;
+  width: 3px;
+  height: 0;
+}
+.Project .project_right li:nth-child(3):hover::before {
+  background-color: rgba(28, 28, 28, 0.842);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: rgba(0, 0, 0, 0.501);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.Project .project_right li:nth-child(3):hover span {
+  display: block;
+}
+.Project .project_right li:nth-child(3):hover span:nth-child(1) {
+  width: 92%;
+}
+.Project .project_right li:nth-child(3):hover span:nth-child(2) {
+  height: 93%;
+}
+.Project .project_right li:nth-child(3):hover span:nth-child(3) {
+  width: 92%;
+}
+.Project .project_right li:nth-child(3):hover span:nth-child(4) {
+  height: 93%;
+}
+.Project .project_right li:nth-child(3):hover a {
+  position: absolute;
+  display: block;
+}
+.Project .project_right li:nth-child(3):hover a h3 {
+  font-size: 20px;
+  text-align: center;
+  padding: 24px;
+  transform: translateY(17px);
+  transition: 0.3s;
+  color: #fff;
+}
+.Project .project_right li:nth-child(3):hover a p {
+  font-size: 16px;
+  padding-left: 20px;
+  line-height: 24px;
+  transform: translateY(23px);
+  color: #fff;
+}
 .Project .project_right li:last-child {
+  position: relative;
   padding: 20px;
   width: 60%;
   border: 1px solid #000;
@@ -624,35 +773,107 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
+.Project .project_right li:last-child span:nth-child(1) {
+  left: 10px;
+  top: 10px;
+  width: 0;
+  height: 3px;
+}
+.Project .project_right li:last-child span:nth-child(2) {
+  right: 10px;
+  top: 10px;
+  width: 3px;
+  height: 0;
+}
+.Project .project_right li:last-child span:nth-child(3) {
+  right: 10px;
+  bottom: 10px;
+  width: 0;
+  height: 3px;
+}
+.Project .project_right li:last-child span:nth-child(4) {
+  left: 10px;
+  bottom: 10px;
+  width: 3px;
+  height: 0;
+}
+.Project .project_right li:last-child:hover::before {
+  background-color: rgba(28, 28, 28, 0.842);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: rgba(0, 0, 0, 0.501);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.Project .project_right li:last-child:hover span {
+  display: block;
+}
+.Project .project_right li:last-child:hover span:nth-child(1) {
+  width: 95%;
+}
+.Project .project_right li:last-child:hover span:nth-child(2) {
+  height: 93%;
+}
+.Project .project_right li:last-child:hover span:nth-child(3) {
+  width: 95%;
+}
+.Project .project_right li:last-child:hover span:nth-child(4) {
+  height: 93%;
+}
+.Project .project_right li:last-child:hover a {
+  position: absolute;
+  display: block;
+}
+.Project .project_right li:last-child:hover a h3 {
+  font-size: 20px;
+  text-align: center;
+  padding: 24px;
+  transform: translateY(17px);
+  transition: 0.3s;
+  color: #fff;
+}
+.Project .project_right li:last-child:hover a p {
+  font-size: 16px;
+  padding-left: 20px;
+  line-height: 24px;
+  transform: translateY(23px);
+  color: #fff;
+}
 
 /* Q&A시작 */
 .Q_A {
   display: flex;
   color: #fff;
   height: calc(100vh - 37px);
+  background-image: url(../img/Q_A.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   /* Q&A오른쪽 박스 */
 }
 .Q_A .qa_div {
-  margin-bottom: 40px;
-  width: 100%;
+  margin: 0px auto 40px;
+  width: 60%;
 }
 .Q_A .qa_left {
   justify-content: center;
   height: 100%;
-  width: 50%;
-  border-left: 1px solid #4f4f4f;
-  background-color: #282C34;
+  width: 100%;
 }
 .Q_A .qa_left h2 {
   font-size: 30px;
   text-align: center;
   margin: 69px 0 129px 0;
+  font-weight: bold;
 }
 .Q_A .qa_left .qa_dl {
   width: 90%;
   margin: 0px auto;
   border: 1px solid #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   padding-left: 9px;
 }
 .Q_A .qa_left .qa_dl a {
@@ -660,22 +881,23 @@ html {
   display: inline-block;
   margin: 0px auto;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 .Q_A .qa_left .qa_dl a .fa-angle-down {
   position: absolute;
-  right: 10px;
-  top: 26px;
+  top: 29px;
+  right: 26px;
 }
 .Q_A .qa_left .qa_dl a .fa-angle-up {
   position: absolute;
-  right: 10px;
-  top: 26px;
+  top: 29px;
+  right: 26px;
 }
 .Q_A .qa_left .qa_dl dt {
   line-height: 73px;
   position: relative;
+  padding-left: 21px;
 }
 .Q_A .qa_left .qa_dl dt::before {
   content: "Q";
@@ -684,12 +906,20 @@ html {
   padding-right: 10px;
 }
 .Q_A .qa_left .qa_dl .cont {
+  width: 90%;
   font-size: 16px;
   line-height: 30px;
   color: #fff;
   display: none;
-  padding-right: 45px;
-  padding-left: 28px;
+  padding-left: 21px;
+  margin-bottom: 20px;
+}
+.Q_A .qa_left .qa_dl .cont::before {
+  content: "A";
+  font-weight: bold;
+  color: #fff;
+  padding-right: 10px;
+  display: inline-block;
 }
 .Q_A .qa_right {
   display: flex;
@@ -697,8 +927,6 @@ html {
   justify-content: center;
   height: 100%;
   width: 50%;
-  border-left: 1px solid #4f4f4f;
-  background-color: #282C34;
 }
 
 /* Q&A끝*/
