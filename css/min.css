@@ -43,10 +43,6 @@ html {
   line-height: 70px;
   position: relative;
 }
-.nav li img {
-  width: 20px;
-  height: 20px;
-}
 .nav li button {
   width: 100%;
   height: 100%;
@@ -65,8 +61,32 @@ html {
   background: url("../img/folder.png") no-repeat center;
   background-size: 30px;
 }
+.nav .sns_img {
+  width: 100%;
+  display: flex;
+}
+.nav .sns_img a {
+  width: 33.3%;
+  text-align: center;
+  margin-top: 10px;
+}
+.nav .sns_img a img {
+  width: 45%;
+  margin: 15px auto;
+}
 .nav li:last-child {
-  border-bottom: 1px solid #000;
+  position: absolute;
+  bottom: 16px;
+  border: none;
+}
+.nav li:last-child p {
+  font-size: 12px;
+  color: rgba(204, 204, 204, 0.8);
+  line-height: 18px;
+  width: 226px;
+  text-indent: 10px;
+  margin: 36px auto;
+  text-align: center;
 }
 
 .content_wrap {
@@ -294,23 +314,56 @@ html {
 .About .about_left h2 {
   font-size: 50px;
 }
-.About .about_left p {
-  text-indent: 15px;
-  line-height: 30px;
-}
 .About .about_left ul {
   width: 100%;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 .About .about_left ul .about_left_img {
   margin: 0px auto;
-  text-align: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-image: url(../img/min3.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-bottom: 1px solid #fff;
 }
-.About .about_left ul .about_left_text {
-  margin: 50px auto;
+.About .about_left ul .about_left_img::after {
+  content: "";
   border: 1px solid #fff;
-  width: 80%;
-  line-height: 36px;
+  width: 32%;
+  display: block;
+  position: absolute;
+  top: 44%;
+  left: 20%;
+}
+.About .about_left ul li .about_wrap_box {
+  display: flex;
+}
+.About .about_left ul li .about_left_text {
+  width: 40%;
+  padding-left: 20px;
+}
+.About .about_left ul li .about_left_text h3 {
+  font-size: 22px;
+  margin-bottom: 1.2rem;
+  line-height: 50px;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  font-weight: bold;
+}
+.About .about_left ul li .about_left_text h3 span {
+  font-size: 16px;
+}
+.About .about_left ul li .about_left_text p {
+  font-size: 18px;
+  margin-bottom: 1.2rem;
+}
+.About .about_left ul li .about_right_text {
+  width: 60%;
+  margin-left: 3%;
+}
+.About .about_left ul li .about_right_text p {
   font-size: 18px;
 }
 .About .about_right {
@@ -932,7 +985,110 @@ html {
 /* Q&A끝*/
 /* contact 시작*/
 .Contact {
+  display: flex;
+  color: #fff;
   height: calc(100vh - 37px);
+  color: #fff;
+  background-color: #282C34;
+}
+.Contact .con_left {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+.Contact .con_left h3 {
+  font-size: 30px;
+  text-align: center;
+  margin: 69px 0 69px 0;
+  font-weight: bold;
+}
+.Contact .con_left form {
+  padding: 0 30px 0 30px;
+}
+.Contact .con_left form label {
+  display: block;
+  font-size: 20px;
+  margin: 15px 0 7px 0;
+}
+.Contact .con_left form .in_name {
+  width: 50%;
+  height: 39px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+}
+.Contact .con_left form .in_title {
+  width: 100%;
+  height: 39px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+}
+.Contact .con_left form input[type=email] {
+  width: 50%;
+  height: 39px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+}
+.Contact .con_left form textarea {
+  display: block;
+  word-wrap: break-word;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 25px;
+  resize: none;
+  outline: none;
+  border-radius: 10px;
+}
+.Contact .con_left form input[type=submit] {
+  height: 39px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+.Contact .con_left form input[type=submit] {
+  width: 150px;
+  height: 50px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+.Contact .con_right {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  border-left: 1px solid #4f4f4f;
+}
+.Contact .con_right div {
+  margin: 0px auto;
+  position: absolute;
+  top: 15%;
+  left: 4%;
+  /* transform: translate(-50%, -50%);*/
+}
+.Contact .con_right div h3 {
+  font-size: 24px;
+  margin: 40px 0 20px 0;
+  font-weight: bold;
+}
+.Contact .con_right div p {
+  font-size: 18px;
+  line-height: 25px;
+}
+.Contact .con_right div ul li {
+  width: 100%;
+}
+.Contact .con_right div ul li a {
+  width: 6%;
+  display: inline-block;
+  margin-right: 25px;
+}
+.Contact .con_right div ul li a img {
+  width: 100%;
 }
 
 /* contact 끝*//*# sourceMappingURL=min.css.map */

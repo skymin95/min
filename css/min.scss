@@ -33,30 +33,13 @@
   width: 3px;
   height: 0;
 }
-// @mixin span40_1{
-//   left: 10px;
-//   top: 10px;
-//   width: 0;
-//   height: 3px;
-// }
-// @mixin span40_2{
-//   left: 10px;
-//   top: 10px;
-//   width: 0;
-//   height: 3px;
-// }
-// @mixin span40_3{
-//   left: 10px;
-//   top: 10px;
-//   width: 0;
-//   height: 3px;
-// }
-// @mixin span40_4{
-//   left: 10px;
-//   top: 10px;
-//   width: 0;
-//   height: 3px;
-// }
+@mixin input{
+  height: 39px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+}
 // 공용
 html{
   font-family: 'Noto Sans KR', sans-serif;
@@ -99,10 +82,10 @@ li{
   border-top: 1px solid #000;
   line-height: 70px;
   position: relative;
-img{
-  width: 20px;
-  height: 20px;
-}
+// img{
+//   width: 20px;
+//   height: 20px;
+// }
 button{
   width: 100%;
   height: 100%;
@@ -122,8 +105,33 @@ button::before{
   background-size: 30px;
 }
 }
+.sns_img{
+  width: 100%;
+  display: flex;
+  a{
+    width: 33.3%;
+    text-align: center;
+    margin-top: 10px;
+    img{
+      width: 45%;
+      margin: 15px auto;
+    }
+
+  }
+}
 li:last-child{
-  border-bottom: 1px solid #000;
+  position: absolute;
+  bottom: 16px;
+  border: none;
+  p{
+    font-size: 12px;
+    color: #cccc;
+    line-height: 18px;
+    width: 226px;
+    text-indent: 10px;
+    margin: 36px auto;
+    text-align: center;
+  }
 }
 }
 
@@ -360,26 +368,61 @@ span{
   h2{
     font-size: 50px;
   }
-  p{
-    text-indent: 15px;
-    line-height: 30px;
-  }
   ul {
     width: 100%;
-    padding-top: 150px;
+    padding-top: 100px;
   .about_left_img {
     margin: 0px auto;
-    text-align: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: url(../img/min3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-bottom: 1px solid #fff;
+  }
+  .about_left_img::after{
+    content: "";
+    border: 1px solid #fff;
+    width: 32%;
+    display: block;
+    position: absolute;
+    top: 44%;
+    left: 20%;
+  }
+ li{
+  .about_wrap_box{
+    display: flex;
   }
   .about_left_text{
-    margin: 50px auto;
-    border: 1px solid #fff;
-    width: 80%;
-    line-height: 36px;
-    font-size: 18px;
-  }  
+    width: 40%;
+    padding-left: 20px;
+    h3{
+      font-size: 22px;
+      margin-bottom: 1.2rem;
+      line-height: 50px;
+      border-bottom: 3px solid rgb(255, 255, 255);
+      font-weight: bold;
+      span{
+        font-size: 16px;
+      }
+    }
+    p{
+      font-size: 18px;
+      margin-bottom: 1.2rem;
+    }
   }
+  .about_right_text{
+    width: 60%;
+    margin-left: 3%;
+    p{
+      font-size: 18px;
+    }
+  }
+ }
 }  
+}
 // 어바웃 왼쪽박스 종료
 // 어바웃 오른쪽 박스
 .about_right{
@@ -966,8 +1009,104 @@ li{
 /* Q&A끝*/
 /* contact 시작*/
 .Contact{
+  display: flex;
+  color: #fff;
   height: calc(100vh - 37px);
-  // background-color: #282C34;
+  color: #fff;
+  background-color: #282C34;
+  .con_left{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    h3{
+      font-size: 30px;
+        text-align: center;
+        margin: 69px 0 69px 0;
+        font-weight: bold;
+    }
+    form{
+    padding: 0 30px 0 30px;
+
+    label{
+      display: block;
+      font-size: 20px;
+      margin: 15px 0 7px 0;
+    }
+    .in_name{
+      width: 50%;
+      @include input();
+    }
+    .in_title{
+      width: 100%;
+      @include input();
+    }
+    input[type=email]{
+      width: 50%;
+      @include input();
+    }
+    textarea{
+      display: block;
+      word-wrap: break-word;
+      width: 100%;
+      height: 300px;
+      margin-bottom: 25px;
+      resize: none;
+      outline: none;
+      border-radius: 10px;
+    }
+    input[type=submit]{
+      height: 39px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+    }
+    input[type=submit]{
+      width: 150px;
+      height: 50px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  }
+  .con_right{
+    position: relative;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    height: 100%;
+    width: 50%;
+    border-left: 1px solid #4f4f4f;
+    div{
+      margin: 0px auto;
+      position: absolute;
+      top: 15%;
+      left: 4%;
+    /* transform: translate(-50%, -50%);*/
+    h3{
+        font-size: 24px;
+        margin: 40px 0 20px 0;
+        font-weight: bold;
+    }
+    p{
+      font-size: 18px;
+      line-height: 25px;
+    }
+    ul{
+      li{
+        width: 100%;
+        a{
+          width: 6%;
+          display: inline-block;
+          margin-right: 25px;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  }
 }
 
 /* contact 끝*/

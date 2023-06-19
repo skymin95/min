@@ -50,6 +50,22 @@
               CONTACT
             </button>
           </li>
+          <li class="sns_img">
+            <a href="">
+              <img src="./img/facebook.png" alt="facebook">
+            </a>
+            <a href="">
+              <img src="./img/instagram.png" alt="instagram">
+            </a>
+            <a href="">
+              <img src="./img/git_2.png" alt="github">
+            </a>
+          </li>
+
+          <li>
+            <p>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.  
+            </p>
+          </li>
         </ul>
       </nav>   
 
@@ -131,11 +147,31 @@
               <!-- 어바웃 왼쪽 -->
               <article class="about_left">
                 <h2 class="none">&nbsp;</h2>
-                
               <ul>
-                <li class="about_left_img"><img src="./img/html.png" alt="프로필 사진"></li>
-                <li class="about_left_text">
-                  <p></p>
+                <li class="about_left_img">
+                </li>
+                <li>
+                  <ul class=" about_wrap_box">
+                    <li class="about_left_text">
+                      <h3>김민석
+                        <span>Kim Minseok</span>
+                      </h3>
+                      <p>1995.10.02</p>
+                      <p>minseok9036@naver.com</p>
+                      <p>010-6655-9036</p>
+                    </li>
+                    <li class=" about_right_text">
+                      <!-- <p> 웹표준과 웹접근성, 최근 트랜드를 고려해서 마크업을 하며,<br>
+                        스크립트를 이용해 역동적인 웹사이트를 구현하는 웹 개발자입니다
+                      </p> -->
+                        <p>안녕하세요, 웹 개발자 김민석입니다
+                          웹표준과 웹접근성, 최근 트랜드를 고려해서 마크업을 하며,<br>
+                          스크립트를 이용해 역동적인 웹사이트를 구현하는 것에 관심이 많으며,
+                          협업과 유지보수에 좋은 코드를 짜기 위해 꾸준히 공부하고 있습니다.
+                          이용자에게 멋진 사용자 경험을 제공하고, 유연하게 소통하며, 항상 경청하고 열린 자세로 임하며 성장해 나가는 사람이 되겠습니다.
+                        </p>
+                    </li>
+                  </ul>
                 </li>
               </ul>
               </article>
@@ -319,17 +355,64 @@
             <!--context  -->
             <section class="tab_list Contact">
               <h2 class="none">&nbsp;</h2>
-              <article>
+              <article class="con_left">
                 <!-- <h2>박스</h2> -->
                 <div id="stars"></div>
                 <div id="stars2"></div>
                 <div id="stars"></div>
-                <form action="" name="" po>
-                  
-                </form>
-              </article>
+                <!-- mailto: -->
 
+                <h3>Contact me</h3>
+                <form action="email.php" method="post">
+                  
+                  <label for="이름">이름:</label>
+                  <input type="text" id="이름" name="이름" required class="in_name" placeholder="김민석">
+
+                  <label for="이메일">이메일:</label>
+                  <input type="email" id="이메일" name="이메일" required placeholder="minseok9036@naver.com">
+  
+                  <label for="제목">제목:</label>
+                  <input type="text" id="제목" name="제목" required class="in_title" placeholder="제목을 입력해주세요">
+              
+                  <label for="내용">내용:</label>
+                  <textarea id="내용" name="내용" rows="4" cols="50" required placeholder="내용을 입력해주세요"></textarea>
+              
+                  <input type="submit" value="보내기">
+                </form>
+               
+                </article>
+                
+                <article class="con_right">
+                  <div>
+                  <h3>Address</h3>
+                    <p>경기도 고영시 덕양구 성신로 77</p>
+                    <h3>Email</h3>
+                    <p>minseok9036@naver.com</p>
+                    <h3>Phone</h3>
+                    <p>010-6655-9036</p>
+                    <h3>Social</h3>
+                    <ul>
+                      <li>
+                        <a href="">
+                          <img src="./img/facebook.png" alt="facebook">
+                        </a>
+                        <a href="">
+                          <img src="./img/instagram.png" alt="instagram">
+                        </a>
+                        <a href="">
+                          <img src="./img/git_2.png" alt="github">
+                        </a>
+                      </li>
+                    </ul>
+                    <h3>Comment</h3>
+                    <p>제 포트폴리오를 검토해 주셔서 대단히 감사합니다.<br>
+                      개발자로서의 열정과 책임감을 가지고 항상 최선을 다하겠습니다.<br>
+                      언제든 연락 주시면 성실하고 신속하게 응답드리겠습니다.
+                    </p>
+                  </div>
+              </article>
             </section>
+
           </section> 
         </main>      
       </div>
