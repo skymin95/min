@@ -96,9 +96,27 @@
               <article class="first_left">
                 <div class="first_div">
                 <span>안녕하세요 웹 개발자 김민석입니다</span>
-                <h2>
+              <div class="ani_move">
+                <div></div>
+                <div>움</div>
+                <div>직</div>
+                <div>이</div>
+                <div>는</div>
+                <div>웹</div>
+                <div>사</div>
+                <div>이</div>
+                <div>트</div>
+                <div>를</div>
+                <div>개</div>
+                <div>발</div>
+                <div>합</div>
+                <div>니</div>
+                <div>다</div>
+                <div>.</div>
+              </div>
+                <!-- <h2>
                   움직이는 웹사이트를 개발합니다. 
-                </h2>
+                </h2> -->
                 <span class="first_span"> 웹표준과 웹접근성, 최근 트랜드를 고려해서 마크업을 하며,<br>
                   스크립트를 이용해 역동적인 웹사이트를 구현하는 웹 개발자입니다.</span>
                 </div>
@@ -164,10 +182,10 @@
                       <!-- <p> 웹표준과 웹접근성, 최근 트랜드를 고려해서 마크업을 하며,<br>
                         스크립트를 이용해 역동적인 웹사이트를 구현하는 웹 개발자입니다
                       </p> -->
-                        <p>안녕하세요, 웹 개발자 김민석입니다
-                          웹표준과 웹접근성, 최근 트랜드를 고려해서 마크업을 하며,<br>
-                          스크립트를 이용해 역동적인 웹사이트를 구현하는 것에 관심이 많으며,
-                          협업과 유지보수에 좋은 코드를 짜기 위해 꾸준히 공부하고 있습니다.
+                        <p>안녕하세요, 웹 개발자 김민석입니다<br>
+                          웹표준과 웹접근성, 최근 트랜드를 고려해서 <br>마크업을 하며,
+                          스크립트를 이용해 역동적인<br> 웹사이트를 구현하는 것에 관심이 많으며,<br>
+                          협업과 유지보수에 좋은 코드를 짜기 위해 꾸준히 공부하고 있습니다.<br>
                           이용자에게 멋진 사용자 경험을 제공하고, 유연하게 소통하며, 항상 경청하고 열린 자세로 임하며 성장해 나가는 사람이 되겠습니다.
                         </p>
                     </li>
@@ -178,26 +196,52 @@
               <!-- 어바웃 오른쪽 박스 -->
               <article class="about_right">
                 <h2 class="none">&nbsp;</h2>
-                <button id="btn" onclick="startAnimation()">SKILL</button>
+                <button id="btn">SKILL</button>
                   <div id="container">
-                    <div class="skill_box1">
-                      <img src="./img/html.png" title="html이미지"  class="image vertex1">
-                      <img src="./img/css.png" title="css이미지" class="image vertex2">                   
-                      <img src="./img/github.png" title="깃헙이미지" class="image vertex6">
-                      <img src="./img/react.png" title="리액트" class="image vertex7">
-                    </div>
+                    <div class="wrap">
+                      <div class="ss_box"> 
+                        <div class="img1 skill_img">
+                          <img src="./img/html.png" alt="사진"  class="image vertex1">
+                        </div>
+                  
+                        <div class="img2 skill_img"> 
+                          <img src="./img/css.png" alt="사진"  class="image vertex2">
+                        </div>
+                        
+                        <div class= "img3 skill_img">
+                          <img src="./img/js.png" alt="" class="image vertex3">
+                        </div>
 
-                    <div class="skill_box2">
-                      <img src="./img/js.png" title="js이미지" class="image vertex3">
-                      <img src="./img/figma.png" title="피그마이미지" class="image vertex5">
-                      <img src="./img/sass.png" title="sass이미지" class="image vertex8">
-                      <img src="./img/mysql.png" title="myspl이미지" class="image vertex10">
-                    </div>
-                    <div class="skill_box3">
-                      <img src="./img/jquery.png" title="jquery이미지" class="image vertex4">
-                      <img src="./img/php.png" title="php이미지" class="image vertex9">
-                    </div>
-                    <!-- 추가 이미지들을 여기에 추가 -->
+                        <div class= "img4 skill_img"> 
+                          <img src="./img/jquery.png" alt="사진" class="image vertex4">
+                        </div>
+
+                        <div class= "img5 skill_img"> 
+                          <img src="./img/figma.png" alt="사진" class="image vertex5">
+                        </div>
+
+                        <div class= "img6 skill_img"> 
+                          <img src="./img/github.png" alt="사진" class="image vertex6">
+                        </div>
+
+                        <div class= "img7 skill_img"> 
+                          <img src="./img/react.png" alt="사진" class="image vertex7">
+                        </div>
+
+                        <div class= "img8 skill_img"> 
+                          <img src="./img/sass.png" alt="사진" class="image vertex8">
+                        </div>
+
+                        <div class= "img9 skill_img"> 
+                          <img src="./img/php.png" alt="사진" class="image vertex9">
+                        </div>
+
+                        <div class= "img10 skill_img"> 
+                          <img src="./img/mysql.png" alt="사진" class="image vertex10">
+                        </div>
+                  </div>
+
+                  <!--아래 컨테이너박스 -->
                   </div>
               </article>
             </section>
@@ -377,7 +421,7 @@
                   <label for="내용">내용:</label>
                   <textarea id="내용" name="내용" rows="4" cols="50" required placeholder="내용을 입력해주세요"></textarea>
               
-                  <input type="submit" value="보내기">
+                  <button class="email_send">보내기</button>
                 </form>
                
                 </article>

@@ -204,6 +204,45 @@ video{
   margin: 0px auto;
   padding-left: 50px;    
 }
+// 
+.ani_move{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 4.3em;
+  margin-bottom: 50px;
+  line-height: 132px;
+  @keyframes move-up {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  div{
+    animation: move-up 3s 3;
+    animation-delay: calc(0.22s * var(--index));
+    animation-fill-mode: both;
+  }
+  .ani_move div:first-child {
+    display: none;
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .ani_move div:last-child {
+    animation: fade-out 0.5s ease-out 1s forwards;
+  }
+}
+// 
 h2{
   font-size: 4.3em;
   margin-bottom: 50px;
@@ -265,13 +304,12 @@ span{
               0 20px 20px rgba(0,0,0,.15); */
 }
 
-
 .invisible {
   opacity: 0;
 }
 
 .container.invisible div:first-child {
-  transform: translateX(-50px) translateY(100px);
+  transform: translateX(-50px) translateY(-100px)
 }
 .container.invisible div:nth-child(2) {
   transform: translateX(20px) translateY(100px);
@@ -382,16 +420,7 @@ span{
     background-position: top;
     border-bottom: 1px solid #fff;
   }
-  .about_left_img::after{
-    content: "";
-    border: 1px solid #fff;
-    width: 32%;
-    display: block;
-    position: absolute;
-    top: 44%;
-    left: 20%;
-  }
- li{
+  li{
   .about_wrap_box{
     display: flex;
   }
@@ -415,15 +444,18 @@ span{
   }
   .about_right_text{
     width: 60%;
-    margin-left: 3%;
+    margin-left: 3%;  
+    line-height: 25px;
     p{
       font-size: 18px;
+      padding: 14px 20px 20px 20px;
     }
   }
  }
 }  
 }
 // 어바웃 왼쪽박스 종료
+
 // 어바웃 오른쪽 박스
 .about_right{
   position: relative;
@@ -434,10 +466,35 @@ span{
   width: 50%;
   border-left: 1px solid #4f4f4f;
   background-color: #282C34;
+  overflow: hidden;
+  /* 이미지를 숨기기 */
+  .hide {
+    display: none;
+  }
+  @keyframes buttonAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .animate {
+    animation: buttonAnimation 1s linear infinite;
+  }
   #btn{
     position: absolute;
     background: none;
-    border: none;
+    // border: none;
     color: #fff;
     cursor: pointer;
     top: 50%;
@@ -445,86 +502,73 @@ span{
     transform: translate(-50%, -50%);
     font-size: 20px;
     z-index: 3;
+    border: 1px solid;
+    width: 101px;
+    height: 56px;
+    border-radius: 10px;
   }
+  @keyframes ani{
+
+    100% {transform:rotate(-360deg);}
+  }
+  @keyframes ani01{
+    100%{transform:rotate(360deg);}
+  }
+
+
   #container {
     position: relative;
     height: 100%;
-    .image {
-      position: absolute;
-      transition: all 1s ease-in-out;
+    // .image {
+    //   position: absolute;
+    //   transition: all 1s ease-in-out;
+    //   opacity: 0;
+    // }
+   .wrap{
+      width:700px;height:700px;
+      position:relative;
+      margin: 0px auto;
+    }
+  .ss_box{
+  position:relative;
+  width:450px;
+  height:450px;
+  left: calc(50% - 225px);
+  top: calc(50% - 225px);
+  transform-origin: center center;
+  animation: ani01 20s linear infinite;
+
+
+  // 기본꺼
+      // position:relative;
+      // width:450px;height:450px;
+      // left:100px;top:100px;
+      // // border: 1px solid #f00;
+      // animation:ani01 20s linear infinite;
+    }
+    .skill_img{
+      position:absolute;
+      width:60px;height:60px;
+      border-radius:50%;
+      animation:ani 20s linear infinite;
       opacity: 0;
     }
-    .skill_box1{
-      position: relative;
-      width: 287px;
-      height: 558px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      .vertex1 {
-        left: -213px;
-        top: -7px;
-      }
-      .vertex2 {
-        top: -126px;
-        right: 150px;
-      }
-      .vertex6 {
-        bottom: 184px;
-        right: 53px;
-      }
-      .vertex7 {
-        bottom: 184px;
-        left: 60px;
-      }
-    }
-    .skill_box2{
-      position: absolute;
-      width: 527px;
-      height: 339px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-    }
-      .vertex3 {
-        right: -165px;
-        top: -129px;
-      }
-      .vertex5 {
-        right: -213px;
-        bottom: 0px;
-      }
-      .vertex8 {
-        left: 177px;
-        bottom: -124px;
-      }
-      .vertex10 {
-        left: 69px;
-        top: 169px;
-      }
-    }
-    .skill_box3{
-      position: absolute;
-      width: 652px;
-      height: 71px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      .vertex4 {
-        right: 73px;
-        bottom: -182px;
-        width: 80px;
-        height: 80px;
-      }
-      .vertex9 {
-        left: -158px;
-        bottom: -129px;
-      }
+    // 호버시 멈춤
+    .ss_box:hover,.ss_box:hover .skill_img{animation-play-state: paused;}
+    
+    .img1{left: 108px;top: 31px;}
+    .img2{right: 82px;top: 31px;}
+    .img3{right: -25px;top: 127px;}
+    .img4{right: -73px;top: 251px;}
+    .img5{right: -25px;bottom: -4px;}
+    .img6{right: 80px;bottom: -124px;}
+    .img7{left: 114px;bottom: -123px;}
+    .img8{left: -25px;bottom: 0px;}
+    .img9{left: -64px;bottom: 135px;}
+    .img10{left: -26px; top: 120px;}
+  }
     }
   }
-}
 
 // About종료
 
@@ -1048,24 +1092,46 @@ li{
       display: block;
       word-wrap: break-word;
       width: 100%;
-      height: 300px;
+      height: 214px;
       margin-bottom: 25px;
       resize: none;
       outline: none;
       border-radius: 10px;
     }
-    input[type=submit]{
-      height: 39px;
-      border-radius: 10px;
-      outline: none;
-      border: none;
-    }
-    input[type=submit]{
+    .email_send {
       width: 150px;
       height: 50px;
+      border-radius: 10px;
       color: #000;
+      // text-transform: uppercase;
+      letter-spacing: 5px;
       font-weight: bold;
-      cursor: pointer;
+      position: relative;
+      transition: all 0.4s;
+      overflow: hidden;
+      z-index: 555;
+      
+      &:focus {
+        outline: none;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(129, 133, 129);
+        top: 0;
+        right: 100%;
+        transition: all 0.4s;
+        z-index: -1; 
+      }
+    
+      &:hover::before{
+        transform: translateX(100%);
+      }
+      &:hover {
+        color: #fff;
+      }
     }
   }
   }

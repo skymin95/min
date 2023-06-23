@@ -10,6 +10,30 @@ let tabList = $(".btn").on("click", function(){
   $(".first").css("display","none");
   $(".portfolio").css("display","none");
 });
+// 텍스트 웨이브
+const aniMove = document.querySelector('.ani_move');
+const aniItems = aniMove.querySelectorAll('div');
+
+aniItems.forEach((item, index) => {
+  item.style.setProperty('--index', index);
+});
+
+function restartAnimation() {
+  aniItems.forEach((item) => {
+    item.style.animation = 'none';
+    void item.offsetWidth;
+    item.style.animation = null;
+  });
+}
+
+// 애니메이션이 완료되면 5초 후에 다시 시작
+aniMove.addEventListener('animationend', () => {
+  setTimeout(() => {
+    restartAnimation();
+  }, 2800);
+});
+
+
 // text효과
 let item = document.querySelector('.container');
 let child = item.getElementsByTagName('div');
@@ -48,31 +72,28 @@ $(function() {
 // 비디오재생속도
 var video = document.querySelector('video');
 video.playbackRate = 0.7; // 재생 속도를 0.5로 설정
-
-// 스킬버튼 
-function startAnimation() {
-  var button = document.getElementById("btn");
-  // button.style.display = "none";
-   // 버튼 숨김
-
-  var images = document.getElementsByClassName("image");
-  var delay = 100; // 이미지 이동 딜레이 (0.1초)
-
-  var radius = 200; // 10각형의 반지름
-  var angle = (2 * Math.PI) / images.length; // 이미지들 간의 각도
-
-  for (var i = 0; i < images.length; i++) {
-    var image = images[i];
-    var theta = i * angle;
-    var x = Math.cos(theta) * radius;
-    var y = Math.sin(theta) * radius;
-
-    setTimeout(function(img, posX, posY) {
-      img.style.opacity = 1;
-      img.style.transform = "translate(" + posX + "px, " + posY + "px)";
-    }, i * delay, image, x, y);
-  }
-};
+// 스킬
+// $(document).ready(function() {
+//   $("#btn").click(function() {
+//     $(this).hide();
+//     $(".skill_img").animate({ opacity: 1 }, 1000);
+//   });
+// });
+$(document).ready(function() {
+  $("#btn").click(function() {
+    $(this).hide();
+    $(".skill_img").each(function(index) {
+      var $img = $(this);
+      setTimeout(function() {
+        $img.animate({ opacity: 1 }, 500);
+      }, index * 500);
+    });
+  });
+});
+// 버튼
+$(document).ready(function() {
+  $('#btn').addClass('animate');
+});
 // Q&A
   $(function(){
     let q=$('.qa_left> .qa_div > .qa_dl > dt');

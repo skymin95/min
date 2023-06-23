@@ -156,6 +156,43 @@ html {
   margin: 0px auto;
   padding-left: 50px;
 }
+.first .first_left .ani_move {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 4.3em;
+  margin-bottom: 50px;
+  line-height: 132px;
+}
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.first .first_left .ani_move div {
+  animation: move-up 3s 3;
+  animation-delay: calc(0.22s * var(--index));
+  animation-fill-mode: both;
+}
+.first .first_left .ani_move .ani_move div:first-child {
+  display: none;
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.first .first_left .ani_move .ani_move div:last-child {
+  animation: fade-out 0.5s ease-out 1s forwards;
+}
 .first .first_left h2 {
   font-size: 4.3em;
   margin-bottom: 50px;
@@ -219,7 +256,7 @@ html {
   opacity: 0;
 }
 .first .first_right .container.invisible div:first-child {
-  transform: translateX(-50px) translateY(100px);
+  transform: translateX(-50px) translateY(-100px);
 }
 .first .first_right .container.invisible div:nth-child(2) {
   transform: translateX(20px) translateY(100px);
@@ -329,15 +366,6 @@ html {
   background-position: top;
   border-bottom: 1px solid #fff;
 }
-.About .about_left ul .about_left_img::after {
-  content: "";
-  border: 1px solid #fff;
-  width: 32%;
-  display: block;
-  position: absolute;
-  top: 44%;
-  left: 20%;
-}
 .About .about_left ul li .about_wrap_box {
   display: flex;
 }
@@ -362,9 +390,11 @@ html {
 .About .about_left ul li .about_right_text {
   width: 60%;
   margin-left: 3%;
+  line-height: 25px;
 }
 .About .about_left ul li .about_right_text p {
   font-size: 18px;
+  padding: 14px 20px 20px 20px;
 }
 .About .about_right {
   position: relative;
@@ -375,11 +405,35 @@ html {
   width: 50%;
   border-left: 1px solid #4f4f4f;
   background-color: #282C34;
+  overflow: hidden;
+  /* 이미지를 숨기기 */
+}
+.About .about_right .hide {
+  display: none;
+}
+@keyframes buttonAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.About .about_right .animate {
+  animation: buttonAnimation 1s linear infinite;
 }
 .About .about_right #btn {
   position: absolute;
   background: none;
-  border: none;
   color: #fff;
   cursor: pointer;
   top: 50%;
@@ -387,83 +441,90 @@ html {
   transform: translate(-50%, -50%);
   font-size: 20px;
   z-index: 3;
+  border: 1px solid;
+  width: 101px;
+  height: 56px;
+  border-radius: 10px;
+}
+@keyframes ani {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes ani01 {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .About .about_right #container {
   position: relative;
   height: 100%;
 }
-.About .about_right #container .image {
+.About .about_right #container .wrap {
+  width: 700px;
+  height: 700px;
+  position: relative;
+  margin: 0px auto;
+}
+.About .about_right #container .ss_box {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  left: calc(50% - 225px);
+  top: calc(50% - 225px);
+  transform-origin: center center;
+  animation: ani01 20s linear infinite;
+}
+.About .about_right #container .skill_img {
   position: absolute;
-  transition: all 1s ease-in-out;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation: ani 20s linear infinite;
   opacity: 0;
 }
-.About .about_right #container .skill_box1 {
-  position: relative;
-  width: 287px;
-  height: 558px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.About .about_right #container .ss_box:hover, .About .about_right #container .ss_box:hover .skill_img {
+  animation-play-state: paused;
 }
-.About .about_right #container .skill_box1 .vertex1 {
-  left: -213px;
-  top: -7px;
+.About .about_right #container .img1 {
+  left: 108px;
+  top: 31px;
 }
-.About .about_right #container .skill_box1 .vertex2 {
-  top: -126px;
-  right: 150px;
+.About .about_right #container .img2 {
+  right: 82px;
+  top: 31px;
 }
-.About .about_right #container .skill_box1 .vertex6 {
-  bottom: 184px;
-  right: 53px;
+.About .about_right #container .img3 {
+  right: -25px;
+  top: 127px;
 }
-.About .about_right #container .skill_box1 .vertex7 {
-  bottom: 184px;
-  left: 60px;
+.About .about_right #container .img4 {
+  right: -73px;
+  top: 251px;
 }
-.About .about_right #container .skill_box2 {
-  position: absolute;
-  width: 527px;
-  height: 339px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+.About .about_right #container .img5 {
+  right: -25px;
+  bottom: -4px;
 }
-.About .about_right #container .vertex3 {
-  right: -165px;
-  top: -129px;
-}
-.About .about_right #container .vertex5 {
-  right: -213px;
-  bottom: 0px;
-}
-.About .about_right #container .vertex8 {
-  left: 177px;
+.About .about_right #container .img6 {
+  right: 80px;
   bottom: -124px;
 }
-.About .about_right #container .vertex10 {
-  left: 69px;
-  top: 169px;
+.About .about_right #container .img7 {
+  left: 114px;
+  bottom: -123px;
 }
-.About .about_right .skill_box3 {
-  position: absolute;
-  width: 652px;
-  height: 71px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+.About .about_right #container .img8 {
+  left: -25px;
+  bottom: 0px;
 }
-.About .about_right .skill_box3 .vertex4 {
-  right: 73px;
-  bottom: -182px;
-  width: 80px;
-  height: 80px;
+.About .about_right #container .img9 {
+  left: -64px;
+  bottom: 135px;
 }
-.About .about_right .skill_box3 .vertex9 {
-  left: -158px;
-  bottom: -129px;
+.About .about_right #container .img10 {
+  left: -26px;
+  top: 120px;
 }
 
 /* project 시작*/
@@ -1038,24 +1099,43 @@ html {
   display: block;
   word-wrap: break-word;
   width: 100%;
-  height: 300px;
+  height: 214px;
   margin-bottom: 25px;
   resize: none;
   outline: none;
   border-radius: 10px;
 }
-.Contact .con_left form input[type=submit] {
-  height: 39px;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-}
-.Contact .con_left form input[type=submit] {
+.Contact .con_left form .email_send {
   width: 150px;
   height: 50px;
+  border-radius: 10px;
   color: #000;
+  letter-spacing: 5px;
   font-weight: bold;
-  cursor: pointer;
+  position: relative;
+  transition: all 0.4s;
+  overflow: hidden;
+  z-index: 555;
+}
+.Contact .con_left form .email_send:focus {
+  outline: none;
+}
+.Contact .con_left form .email_send::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(129, 133, 129);
+  top: 0;
+  right: 100%;
+  transition: all 0.4s;
+  z-index: -1;
+}
+.Contact .con_left form .email_send:hover::before {
+  transform: translateX(100%);
+}
+.Contact .con_left form .email_send:hover {
+  color: #fff;
 }
 .Contact .con_right {
   position: relative;
