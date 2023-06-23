@@ -42,8 +42,14 @@
 }
 // 공용
 html{
-  font-family: 'Noto Sans KR', sans-serif;
-  overflow: hidden;
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    // font-family: 'NEXON Lv1 Gothic OTF';
+    // src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    // font-weight: normal;
+    // font-style: normal;
 }
 /* 시작 */
 .all_wrap {
@@ -131,6 +137,9 @@ li:last-child{
     text-indent: 10px;
     margin: 36px auto;
     text-align: center;
+  }
+  .instagram{
+    filter: brightness()
   }
 }
 }
@@ -447,7 +456,9 @@ span{
     margin-left: 3%;  
     line-height: 25px;
     p{
+      width: 94%;
       font-size: 18px;
+      line-height: 30px;
       padding: 14px 20px 20px 20px;
     }
   }
@@ -1065,7 +1076,7 @@ li{
     h3{
       font-size: 30px;
         text-align: center;
-        margin: 69px 0 69px 0;
+        margin: 74px 0 69px 0;
         font-weight: bold;
     }
     form{

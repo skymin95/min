@@ -1,7 +1,9 @@
 @charset "UTF-8";
 html {
-  font-family: "Noto Sans KR", sans-serif;
-  overflow: hidden;
+  font-family: "NEXON Lv2 Gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* 시작 */
@@ -87,6 +89,9 @@ html {
   text-indent: 10px;
   margin: 36px auto;
   text-align: center;
+}
+.nav li:last-child .instagram {
+  filter: brightness();
 }
 
 .content_wrap {
@@ -393,7 +398,9 @@ html {
   line-height: 25px;
 }
 .About .about_left ul li .about_right_text p {
+  width: 94%;
   font-size: 18px;
+  line-height: 30px;
   padding: 14px 20px 20px 20px;
 }
 .About .about_right {
@@ -1060,7 +1067,7 @@ html {
 .Contact .con_left h3 {
   font-size: 30px;
   text-align: center;
-  margin: 69px 0 69px 0;
+  margin: 74px 0 69px 0;
   font-weight: bold;
 }
 .Contact .con_left form {
