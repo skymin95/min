@@ -10,6 +10,99 @@ let tabList = $(".btn").on("click", function(){
   $(".first").css("display","none");
   $(".portfolio").css("display","none");
 });
+// 다크모드 초반원본
+// const modeSwitch = document.getElementById("modeSwitch");
+
+// modeSwitch.addEventListener("change", function() {
+//   document.body.classList.toggle("dark-mode");
+// });
+// 다크모드 시작
+document.addEventListener("DOMContentLoaded", function() {
+  // 페이지 로드 시 다크 모드로 시작
+  document.body.classList.add("dark-mode");
+  document.querySelector("button").style.color = "#fff";
+  document.querySelectorAll("li").forEach(li => li.style.color = "#fff");
+  changeImage(); // 이미지 변경
+});
+
+
+const modeSwitch = document.getElementById("modeSwitch");
+const changeImageButton = document.getElementById("changeImageButton");
+
+modeSwitch.addEventListener("change", function() {
+  document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
+    // 다크 모드일 때 특정 색상을 적용
+    document.querySelector("button").style.color = "#fff";
+    document.querySelectorAll("li").forEach(li => li.style.color = "#fff");
+    document.querySelectorAll("p").forEach(p => p.style.color = "#fff");
+    document.querySelectorAll("label").forEach(label =>label.style.color = "#fff");
+    document.querySelectorAll("h2").forEach(h2 =>h2.style.color = "#fff");
+    // document.querySelectorAll("h3").forEach(h3 =>h3.style.color = "#fff");
+    document.querySelectorAll("button").forEach(button =>button.style.color = "#fff");
+
+    
+    changeImage(); // 다크 모드로 전환 시 이미지 변경
+  } else {
+    // 다크 모드가 아닐 때의 기본 색상을 설정
+    document.querySelector("button").style.color = "black";
+    document.querySelectorAll("li").forEach(li => li.style.color = "black");
+    document.querySelectorAll("p").forEach(p => p.style.color = "black");
+    document.querySelectorAll("label").forEach(label =>label.style.color = "black");
+    document.querySelectorAll("h2").forEach(h2 =>h2.style.color = "black");
+    // document.querySelectorAll("h3").forEach(h3 =>h3.style.color = "black");
+    document.querySelectorAll("button").forEach(button =>button.style.color = "black");
+    changeImage(); // 밝은 모드로 전환 시 이미지 변경
+  }
+});
+
+// 다크모드 이미지변경
+function changeImage() {
+  // var image = document.getElementById("logo");
+  var image = document.querySelector(".logo");
+  if (document.body.classList.contains("dark-mode")) {
+    // 다크 모드일 때 이미지 변경
+    image.src = "./img/logo_w.png";
+    image.alt = "로고";
+  } else {
+    // 밝은 모드일 때 이미지 변경
+    image.src = "./img/logo_d.png"
+    image.alt = "로고";
+  }
+  var facebookImage = document.querySelector(".facebook");
+  if (document.body.classList.contains("dark-mode")) {
+    facebookImage.src = "./img/facebook_w.png";
+    facebookImage.alt = "페이스북";
+  } else {
+    facebookImage.src = "./img/facebook_d.png";
+    facebookImage.alt = "페이스북";
+  }
+  
+  var instagramImage = document.querySelector(".instagram");
+  if (document.body.classList.contains("dark-mode")) {
+    instagramImage.src = "./img/instagram_w.png";
+    instagramImage.alt = "인스타";
+  } else {
+    instagramImage.src = "./img/instagram_d.png";
+    instagramImage.alt = "인스타";
+  }
+  
+  var gitImage = document.querySelector(".git");
+  if (document.body.classList.contains("dark-mode")) {
+    gitImage.src = "./img/git_w.png";
+    gitImage.alt = "깃";
+  } else {
+    gitImage.src = "./img/git_d.png";
+    gitImage.alt = "깃";
+  }
+  changeImageButton.addEventListener("click", changeImage);
+}
+
+
+
+
+
+
 // 텍스트 웨이브
 const aniMove = document.querySelector('.ani_move');
 const aniItems = aniMove.querySelectorAll('div');

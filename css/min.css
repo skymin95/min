@@ -1,5 +1,5 @@
 @charset "UTF-8";
-html {
+html, a {
   font-family: "NEXON Lv2 Gothic";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
   font-weight: normal;
@@ -15,7 +15,6 @@ html {
 .all_wrap .btn {
   background: none;
   border: none;
-  color: #fff;
   cursor: pointer;
 }
 .all_wrap .btn.on::before {
@@ -26,13 +25,91 @@ html {
   background-position: -3px;
 }
 
+body {
+  background-color: #fff;
+}
+body a {
+  color: black;
+}
+body li {
+  color: black;
+}
+
+.dark-mode {
+  background-color: #282C34;
+}
+.dark-mode button {
+  color: #fff;
+}
+.dark-mode li {
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 32px;
+  margin: 20px 0 20px 0;
+  left: 180px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 9999px;
+}
+.switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+  z-index: 50;
+}
+.switch .sun_img img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+}
+.switch .moon_img img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+
+input:checked + .slider {
+  background-color: rgba(0, 144, 249, 0.5);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
 .nav {
-  background: #21252B;
   width: 257px;
   height: 100vh;
+  border-top: 1px solid #18191D;
 }
 .nav h1 a img {
-  width: 173px;
+  width: 70%;
   /* height: 187px; */
   display: block;
   margin: 0 auto 40px auto;
@@ -99,7 +176,6 @@ html {
 }
 
 .header {
-  background: #21252B;
   height: 37px;
 }
 .header .title_list .item {
@@ -108,15 +184,16 @@ html {
 .header .title_list {
   height: 100%;
   display: flex;
+  border: 1px solid #18191D;
+  border-bottom: none;
 }
 .header .title_list li {
-  background: #282C34;
-  color: #fff;
   width: 137px;
   text-align: center;
-  line-height: 37px;
+  line-height: 41px;
   padding-left: 35px;
   font-size: 14px;
+  border-right: 1px solid #18191D;
 }
 .header .title_list li::before {
   position: absolute;
@@ -162,10 +239,11 @@ html {
   padding-left: 50px;
 }
 .first .first_left .ani_move {
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   font-size: 4.3em;
-  margin-bottom: 50px;
+  margin: 10px 0 10px 0;
   line-height: 132px;
 }
 @keyframes move-up {
@@ -205,10 +283,9 @@ html {
 }
 .first .first_left span {
   font-size: 20px;
-  margin-bottom: 50px;
 }
 .first .first_left .first_span {
-  line-height: 30px;
+  line-height: 36px;
 }
 .first .first_right {
   position: relative;
@@ -348,10 +425,10 @@ html {
 .About .about_left {
   display: flex;
   /* flex-direction: column; */
+  border: 1px solid #18191D;
   justify-content: center;
   height: 100%;
   width: 50%;
-  background-color: #282C34;
 }
 .About .about_left h2 {
   font-size: 50px;
@@ -410,8 +487,8 @@ html {
   justify-content: center;
   height: 100%;
   width: 50%;
-  border-left: 1px solid #4f4f4f;
-  background-color: #282C34;
+  border: 1px solid #18191D;
+  border-left: none;
   overflow: hidden;
   /* 이미지를 숨기기 */
 }
@@ -544,7 +621,7 @@ html {
   justify-content: center;
   height: 100%;
   width: 50%;
-  background-color: #282C34;
+  border: 1px solid #18191D;
 }
 .Project .project_left h2 {
   font-size: 30px;
@@ -619,8 +696,11 @@ html {
   justify-content: center;
   height: 100%;
   width: 50%;
-  border-left: 1px solid #4f4f4f;
-  background-color: #282C34;
+  border: 1px solid #18191D;
+  border-left: none;
+}
+.Project .project_right p {
+  color: #fff !important;
 }
 .Project .project_right h2 {
   font-size: 30px;
@@ -643,7 +723,7 @@ html {
   height: 100%;
   display: none;
 }
-.Project .project_right li span {
+.Project .project_right .sp_border {
   position: absolute;
   background: #fff;
   z-index: 10;
@@ -657,25 +737,25 @@ html {
   background-size: 490px 364px;
   background-repeat: no-repeat;
 }
-.Project .project_right li:first-child span:nth-child(1) {
+.Project .project_right li:first-child .sp_t {
   left: 10px;
   top: 10px;
   width: 0;
   height: 3px;
 }
-.Project .project_right li:first-child span:nth-child(2) {
+.Project .project_right li:first-child .sp_r {
   right: 10px;
   top: 10px;
   width: 3px;
   height: 0;
 }
-.Project .project_right li:first-child span:nth-child(3) {
+.Project .project_right li:first-child .sp_b {
   right: 10px;
   bottom: 10px;
   width: 0;
   height: 3px;
 }
-.Project .project_right li:first-child span:nth-child(4) {
+.Project .project_right li:first-child .sp_l {
   left: 10px;
   bottom: 10px;
   width: 3px;
@@ -692,19 +772,16 @@ html {
   background: rgba(0, 0, 0, 0.501);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
-.Project .project_right li:first-child:hover span {
-  display: block;
-}
-.Project .project_right li:first-child:hover span:nth-child(1) {
+.Project .project_right li:first-child:hover .sp_t {
   width: 95%;
 }
-.Project .project_right li:first-child:hover span:nth-child(2) {
+.Project .project_right li:first-child:hover .sp_r {
   height: 93%;
 }
-.Project .project_right li:first-child:hover span:nth-child(3) {
+.Project .project_right li:first-child:hover .sp_b {
   width: 95%;
 }
-.Project .project_right li:first-child:hover span:nth-child(4) {
+.Project .project_right li:first-child:hover .sp_l {
   height: 93%;
 }
 .Project .project_right li:first-child:hover a {
@@ -718,13 +795,16 @@ html {
   transform: translateY(17px);
   transition: 0.3s;
   color: #fff;
+  font-weight: bold;
 }
 .Project .project_right li:first-child:hover a p {
   font-size: 16px;
   padding-left: 20px;
   line-height: 24px;
   transform: translateY(23px);
-  color: #fff;
+}
+.Project .project_right li:first-child:hover a p span {
+  font-size: 14px;
 }
 .Project .project_right li:nth-child(2) {
   position: relative;
@@ -735,25 +815,25 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
-.Project .project_right li:nth-child(2) span:nth-child(1) {
+.Project .project_right li:nth-child(2) .sp_t {
   left: 10px;
   top: 10px;
   width: 0;
   height: 3px;
 }
-.Project .project_right li:nth-child(2) span:nth-child(2) {
+.Project .project_right li:nth-child(2) .sp_r {
   right: 10px;
   top: 10px;
   width: 3px;
   height: 0;
 }
-.Project .project_right li:nth-child(2) span:nth-child(3) {
+.Project .project_right li:nth-child(2) .sp_b {
   right: 10px;
   bottom: 10px;
   width: 0;
   height: 3px;
 }
-.Project .project_right li:nth-child(2) span:nth-child(4) {
+.Project .project_right li:nth-child(2) .sp_l {
   left: 10px;
   bottom: 10px;
   width: 3px;
@@ -770,19 +850,16 @@ html {
   background: rgba(0, 0, 0, 0.501);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
-.Project .project_right li:nth-child(2):hover span {
-  display: block;
+.Project .project_right li:nth-child(2):hover .sp_t {
+  width: 95%;
 }
-.Project .project_right li:nth-child(2):hover span:nth-child(1) {
-  width: 92%;
-}
-.Project .project_right li:nth-child(2):hover span:nth-child(2) {
+.Project .project_right li:nth-child(2):hover .sp_r {
   height: 93%;
 }
-.Project .project_right li:nth-child(2):hover span:nth-child(3) {
-  width: 92%;
+.Project .project_right li:nth-child(2):hover .sp_b {
+  width: 95%;
 }
-.Project .project_right li:nth-child(2):hover span:nth-child(4) {
+.Project .project_right li:nth-child(2):hover .sp_l {
   height: 93%;
 }
 .Project .project_right li:nth-child(2):hover a {
@@ -802,7 +879,6 @@ html {
   padding-left: 20px;
   line-height: 24px;
   transform: translateY(23px);
-  color: #fff;
 }
 .Project .project_right li:nth-child(3) {
   position: relative;
@@ -814,25 +890,25 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
-.Project .project_right li:nth-child(3) span:nth-child(1) {
+.Project .project_right li:nth-child(3) .sp_t {
   left: 10px;
   top: 10px;
   width: 0;
   height: 3px;
 }
-.Project .project_right li:nth-child(3) span:nth-child(2) {
+.Project .project_right li:nth-child(3) .sp_r {
   right: 10px;
   top: 10px;
   width: 3px;
   height: 0;
 }
-.Project .project_right li:nth-child(3) span:nth-child(3) {
+.Project .project_right li:nth-child(3) .sp_b {
   right: 10px;
   bottom: 10px;
   width: 0;
   height: 3px;
 }
-.Project .project_right li:nth-child(3) span:nth-child(4) {
+.Project .project_right li:nth-child(3) .sp_l {
   left: 10px;
   bottom: 10px;
   width: 3px;
@@ -849,19 +925,16 @@ html {
   background: rgba(0, 0, 0, 0.501);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
-.Project .project_right li:nth-child(3):hover span {
-  display: block;
+.Project .project_right li:nth-child(3):hover .sp_t {
+  width: 95%;
 }
-.Project .project_right li:nth-child(3):hover span:nth-child(1) {
-  width: 92%;
-}
-.Project .project_right li:nth-child(3):hover span:nth-child(2) {
+.Project .project_right li:nth-child(3):hover .sp_r {
   height: 93%;
 }
-.Project .project_right li:nth-child(3):hover span:nth-child(3) {
-  width: 92%;
+.Project .project_right li:nth-child(3):hover .sp_b {
+  width: 95%;
 }
-.Project .project_right li:nth-child(3):hover span:nth-child(4) {
+.Project .project_right li:nth-child(3):hover .sp_l {
   height: 93%;
 }
 .Project .project_right li:nth-child(3):hover a {
@@ -881,7 +954,6 @@ html {
   padding-left: 20px;
   line-height: 24px;
   transform: translateY(23px);
-  color: #fff;
 }
 .Project .project_right li:last-child {
   position: relative;
@@ -894,25 +966,25 @@ html {
   background-repeat: no-repeat;
   background-position: center;
 }
-.Project .project_right li:last-child span:nth-child(1) {
+.Project .project_right li:last-child .sp_t {
   left: 10px;
   top: 10px;
   width: 0;
   height: 3px;
 }
-.Project .project_right li:last-child span:nth-child(2) {
+.Project .project_right li:last-child .sp_r {
   right: 10px;
   top: 10px;
   width: 3px;
   height: 0;
 }
-.Project .project_right li:last-child span:nth-child(3) {
+.Project .project_right li:last-child .sp_b {
   right: 10px;
   bottom: 10px;
   width: 0;
   height: 3px;
 }
-.Project .project_right li:last-child span:nth-child(4) {
+.Project .project_right li:last-child .sp_l {
   left: 10px;
   bottom: 10px;
   width: 3px;
@@ -929,19 +1001,16 @@ html {
   background: rgba(0, 0, 0, 0.501);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
-.Project .project_right li:last-child:hover span {
-  display: block;
-}
-.Project .project_right li:last-child:hover span:nth-child(1) {
+.Project .project_right li:last-child:hover .sp_t {
   width: 95%;
 }
-.Project .project_right li:last-child:hover span:nth-child(2) {
+.Project .project_right li:last-child:hover .sp_r {
   height: 93%;
 }
-.Project .project_right li:last-child:hover span:nth-child(3) {
+.Project .project_right li:last-child:hover .sp_b {
   width: 95%;
 }
-.Project .project_right li:last-child:hover span:nth-child(4) {
+.Project .project_right li:last-child:hover .sp_l {
   height: 93%;
 }
 .Project .project_right li:last-child:hover a {
@@ -961,7 +1030,6 @@ html {
   padding-left: 20px;
   line-height: 24px;
   transform: translateY(23px);
-  color: #fff;
 }
 
 /* Q&A시작 */
@@ -998,7 +1066,6 @@ html {
   padding-left: 9px;
 }
 .Q_A .qa_left .qa_dl a {
-  font-family: "Noto Sans", "Noto Sans KR", "맑은 고딕", "arial";
   display: inline-block;
   margin: 0px auto;
   color: #fff;
@@ -1057,14 +1124,14 @@ html {
   color: #fff;
   height: calc(100vh - 37px);
   color: #fff;
-  background-color: #282C34;
 }
 .Contact .con_left {
   position: relative;
   height: 100%;
   width: 50%;
+  border: 1px solid #18191D;
 }
-.Contact .con_left h3 {
+.Contact .con_left h2 {
   font-size: 30px;
   text-align: center;
   margin: 74px 0 69px 0;
@@ -1083,7 +1150,7 @@ html {
   height: 39px;
   border-radius: 10px;
   outline: none;
-  border: none;
+  border: 1px solid #000;
   text-indent: 10px;
 }
 .Contact .con_left form .in_title {
@@ -1091,7 +1158,7 @@ html {
   height: 39px;
   border-radius: 10px;
   outline: none;
-  border: none;
+  border: 1px solid #000;
   text-indent: 10px;
 }
 .Contact .con_left form input[type=email] {
@@ -1099,7 +1166,7 @@ html {
   height: 39px;
   border-radius: 10px;
   outline: none;
-  border: none;
+  border: 1px solid #000;
   text-indent: 10px;
 }
 .Contact .con_left form textarea {
@@ -1115,14 +1182,16 @@ html {
 .Contact .con_left form .email_send {
   width: 150px;
   height: 50px;
+  border: 1px solid #000;
   border-radius: 10px;
-  color: #000;
+  color: #000 !important;
   letter-spacing: 5px;
   font-weight: bold;
   position: relative;
   transition: all 0.4s;
   overflow: hidden;
   z-index: 555;
+  outline: none;
 }
 .Contact .con_left form .email_send:focus {
   outline: none;
@@ -1142,13 +1211,14 @@ html {
   transform: translateX(100%);
 }
 .Contact .con_left form .email_send:hover {
-  color: #fff;
+  color: #fff !important;
 }
 .Contact .con_right {
   position: relative;
   height: 100%;
   width: 50%;
-  border-left: 1px solid #4f4f4f;
+  border-left: none;
+  border: 1px solid #18191D;
 }
 .Contact .con_right div {
   margin: 0px auto;
@@ -1157,7 +1227,7 @@ html {
   left: 4%;
   /* transform: translate(-50%, -50%);*/
 }
-.Contact .con_right div h3 {
+.Contact .con_right div h2 {
   font-size: 24px;
   margin: 40px 0 20px 0;
   font-weight: bold;
