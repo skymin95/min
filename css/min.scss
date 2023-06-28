@@ -680,8 +680,6 @@ span{
   height: 100%;
   width: 50%;
   border: 1px solid #18191D;
-  // border-right: none;
-  // background-color: #18191D;
   h2{
     font-size: 30px;
     font-weight: bold;
@@ -694,7 +692,6 @@ span{
     width: 100%;
     height: 622px;
     overflow: hidden;
-    // border: 1px solid #fff;
     li:first-child{
       width: 40%;
       border: 1px solid #000;
@@ -846,6 +843,18 @@ li{
     color: #fff;
     font-weight: bold;
     }
+    .asdasd{
+      width: 100%;
+      display: flex;
+      gap: 5%;
+      margin: 20px 0 20px;
+      span{
+        width: 20%;
+        text-align: center;
+        border: 1px solid #fff;
+        border-radius: 10px;
+      }
+    }
     p{
     font-size: 16px;
     padding-left: 20px;
@@ -891,13 +900,13 @@ li{
           @include bg_hover;
           }
           .sp_t{
-            width: 95%;
+            width: 93%;
         }
         .sp_r{
             height: 93%;
         }
         .sp_b{
-            width: 95%;
+            width: 93%;
         }
         .sp_l{
         height: 93%;  
@@ -907,11 +916,27 @@ li{
         display: block;
         h3{
         font-size: 20px;
+        font-weight: bold;
         text-align: center;
         padding: 24px;
         transform: translateY(17px);
         transition: 0.3s;
         color: #fff;
+        }
+        .asdasd{
+          width: 100%;
+          display: flex;
+          gap: 4%;
+          margin: 20px 0 20px;
+          span{
+            width: 20%;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            &:not(:last-child){
+              line-height: 36px;
+              }
+          }
         }
         p{
         font-size: 16px;
@@ -957,13 +982,13 @@ li{
           @include bg_hover;
           }
           .sp_t{
-            width: 95%;
+            width: 93%;
         }
         .sp_r{
             height: 93%;
         }
         .sp_b{
-            width: 95%;
+            width: 93%;
         }
         .sp_l{
         height: 93%;  
@@ -973,11 +998,37 @@ li{
         display: block;
         h3{
         font-size: 20px;
+        font-weight: bold;
         text-align: center;
-        padding: 24px;
+        // padding: 24px;
+        padding: 24px 24px 45px 24px;
         transform: translateY(17px);
         transition: 0.3s;
         color: #fff;
+        }
+        .login_3cha{
+          position: absolute;
+          top: 38px;
+          right: 43px;
+          font-size: 12px;
+          color: #cccccc;
+      
+        }
+        .asdasd{
+          width: 100%;
+          display: flex;
+          gap: 4%;
+          margin: 20px 0 20px;
+          span{
+            width: 20%;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            &:not(:last-child){
+              line-height: 36px;
+              height: 78px;
+              }
+          }
         }
         p{
         font-size: 16px;
@@ -995,7 +1046,7 @@ li{
     }
     li:last-child{
       position: relative;
-      padding: 20px;
+      padding: 20px 0 20px;
       width: 60%;
       border: 1px solid #000;
       background: #fff;
@@ -1040,11 +1091,28 @@ li{
         display: block;
         h3{
         font-size: 20px;
+        font-weight: bold;
         text-align: center;
         padding: 24px;
         transform: translateY(17px);
         transition: 0.3s;
         color: #fff;
+        }
+        .asdasd{
+          width: 100%;
+          display: flex;
+          gap: 5%;
+          margin: 20px 0 20px;
+          span{
+            width: 20%;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            &:not(:last-child){
+              line-height: 36px;
+              height: 78px;
+              }
+          }
         }
         p{
         font-size: 16px;
