@@ -40,18 +40,20 @@ modeSwitch.addEventListener("change", function() {
     document.querySelectorAll("h2").forEach(h2 =>h2.style.color = "#fff");
     // document.querySelectorAll("h3").forEach(h3 =>h3.style.color = "#fff");
     document.querySelectorAll("button").forEach(button =>button.style.color = "#fff");
+    document.querySelectorAll("h3").forEach(h3 =>h3.style.borderBottomColor = "#fff"); // Change border-bottom color
 
     
     changeImage(); // 다크 모드로 전환 시 이미지 변경
   } else {
     // 다크 모드가 아닐 때의 기본 색상을 설정
-    document.querySelector("button").style.color = "black";
     document.querySelectorAll("li").forEach(li => li.style.color = "black");
     document.querySelectorAll("p").forEach(p => p.style.color = "black");
     document.querySelectorAll("label").forEach(label =>label.style.color = "black");
     document.querySelectorAll("h2").forEach(h2 =>h2.style.color = "black");
     // document.querySelectorAll("h3").forEach(h3 =>h3.style.color = "black");
     document.querySelectorAll("button").forEach(button =>button.style.color = "black");
+    document.querySelectorAll("button").forEach(button =>button.style.color = "black");
+    document.querySelectorAll("h3").forEach(h3 =>h3.style.borderBottomColor = "black"); // Change border-bottom color
     changeImage(); // 밝은 모드로 전환 시 이미지 변경
   }
 });
@@ -77,6 +79,14 @@ function changeImage() {
     facebookImage.src = "./img/facebook_d.png";
     facebookImage.alt = "페이스북";
   }
+  var facebookImage = document.querySelector(".con_facebook");
+  if (document.body.classList.contains("dark-mode")) {
+    facebookImage.src = "./img/facebook_w.png";
+    facebookImage.alt = "페이스북";
+  } else {
+    facebookImage.src = "./img/facebook_d.png";
+    facebookImage.alt = "페이스북";
+  }
   
   var instagramImage = document.querySelector(".instagram");
   if (document.body.classList.contains("dark-mode")) {
@@ -87,7 +97,25 @@ function changeImage() {
     instagramImage.alt = "인스타";
   }
   
+  var instagramImage = document.querySelector(".con_instagram");
+  if (document.body.classList.contains("dark-mode")) {
+    instagramImage.src = "./img/instagram_w.png";
+    instagramImage.alt = "인스타";
+  } else {
+    instagramImage.src = "./img/instagram_d.png";
+    instagramImage.alt = "인스타";
+  }
+  
   var gitImage = document.querySelector(".git");
+  if (document.body.classList.contains("dark-mode")) {
+    gitImage.src = "./img/git_w.png";
+    gitImage.alt = "깃";
+  } else {
+    gitImage.src = "./img/git_d.png";
+    gitImage.alt = "깃";
+  }
+  
+  var gitImage = document.querySelector(".con_git");
   if (document.body.classList.contains("dark-mode")) {
     gitImage.src = "./img/git_w.png";
     gitImage.alt = "깃";

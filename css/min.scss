@@ -142,7 +142,7 @@ body {
 
 
 input:checked + .slider {
-  background-color:rgba(0,144,249,.5);;
+  background-color:rgba(0,144,249,.5);
   // background-color: #2196F3;
 }
 
@@ -215,7 +215,7 @@ li:last-child{
     font-size: 12px;
     color: #cccc;
     line-height: 18px;
-    width: 226px;
+    // width: 226px;
     text-indent: 10px;
     margin: 36px auto;
     text-align: center;
@@ -542,7 +542,7 @@ span{
     margin-left: 3%;  
     line-height: 25px;
     p{
-      width: 94%;
+      width: 95%;
       font-size: 18px;
       line-height: 30px;
       padding: 14px 20px 20px 20px;
@@ -712,7 +712,7 @@ span{
         line-height: 80px;
         font-size: 40px;
         font-weight: bold;
-        color: #000;
+        color: #000 !important;
       }
     }
     li:nth-child(3){
@@ -918,6 +918,10 @@ li{
         padding-left: 20px;
         line-height: 24px;
         transform: translateY(23px);
+        span{
+          font-size: 14px;
+          // color: #4f4f4f;
+        }
       }
           }
         }
@@ -980,6 +984,10 @@ li{
         padding-left: 20px;
         line-height: 24px;
         transform: translateY(23px);
+        span{
+          font-size: 14px;
+          // color: #4f4f4f;
+        }
       }
           }
         }
@@ -1043,6 +1051,10 @@ li{
         padding-left: 20px;
         line-height: 24px;
         transform: translateY(23px);
+        span{
+          font-size: 14px;
+          // color: #4f4f4f;
+        }
       }
           }
         }

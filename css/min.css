@@ -162,7 +162,6 @@ input:checked + .slider:before {
   font-size: 12px;
   color: rgba(204, 204, 204, 0.8);
   line-height: 18px;
-  width: 226px;
   text-indent: 10px;
   margin: 36px auto;
   text-align: center;
@@ -475,7 +474,7 @@ input:checked + .slider:before {
   line-height: 25px;
 }
 .About .about_left ul li .about_right_text p {
-  width: 94%;
+  width: 95%;
   font-size: 18px;
   line-height: 30px;
   padding: 14px 20px 20px 20px;
@@ -654,7 +653,7 @@ input:checked + .slider:before {
   line-height: 80px;
   font-size: 40px;
   font-weight: bold;
-  color: #000;
+  color: #000 !important;
 }
 .Project .project_left .pl_list li:nth-child(3) {
   width: 60%;
@@ -880,6 +879,9 @@ input:checked + .slider:before {
   line-height: 24px;
   transform: translateY(23px);
 }
+.Project .project_right li:nth-child(2):hover a p span {
+  font-size: 14px;
+}
 .Project .project_right li:nth-child(3) {
   position: relative;
   width: 40%;
@@ -954,6 +956,9 @@ input:checked + .slider:before {
   padding-left: 20px;
   line-height: 24px;
   transform: translateY(23px);
+}
+.Project .project_right li:nth-child(3):hover a p span {
+  font-size: 14px;
 }
 .Project .project_right li:last-child {
   position: relative;
@@ -1030,6 +1035,9 @@ input:checked + .slider:before {
   padding-left: 20px;
   line-height: 24px;
   transform: translateY(23px);
+}
+.Project .project_right li:last-child:hover a p span {
+  font-size: 14px;
 }
 
 /* Q&A시작 */
