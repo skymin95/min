@@ -656,10 +656,14 @@ input:checked + .slider:before {
   color: #000 !important;
 }
 .Project .project_left .pl_list li:nth-child(3) {
+  position: relative;
   width: 60%;
   border: 1px solid #000;
-  background-color: rgba(61, 61, 61, 0.5);
-  position: relative;
+  background: #fff;
+  background-image: url(../img/hansot.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .Project .project_left .pl_list li:nth-child(3) p {
   color: #fff;
